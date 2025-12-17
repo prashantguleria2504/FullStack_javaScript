@@ -1,5 +1,6 @@
 // when child class has same methods as that of its parent class.
 // Parent class can not access any methods or variables from child class, but child class can inherit from parent class.
+// Method overriding happens when a child class (subclass) provides its own implementation of a method that is already defined in its parent class (superclass).
 
 
 class car {

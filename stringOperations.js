@@ -1,3 +1,4 @@
+// Strings are immutable, cant be changed.
 
 let day = "Tuesday "
 

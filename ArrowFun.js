@@ -17,8 +17,7 @@ const mul = (a,b) => a*b;
 console.log(mul(2,3));
 
 
-// Method 4: with objects
-
+// Method 4: with objects 
 const person = {
     firstName : "Ram",
     lastName : "Singh",

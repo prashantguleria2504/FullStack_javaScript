@@ -1,4 +1,5 @@
 // declaration of an Array
+// Arrays are mutable can be changed.
 
 let marks = Array(6)  // variable marks hold 6 values. Not initializing.
 new Array(10,20,30,40,50,60)  // initialised.
@@ -22,6 +23,28 @@ console.log("Insert element at the start an array -  UNSHIFT : " + markArr);
 markArr.shift()
 console.log("Removes first element of an array -  SHIFT : " + markArr);
 
+let c = markArr.join("_");
+console.log("JOIN Array with a separator : " + " " + c);
+
+console.log("---------------------------------------------------------------------------------------------");
+
+// delete will not change the array length.
+
+let delArr = [10,20,30,40,25,23,56];
+console.log(delArr.length);
+
+delete delArr[0];
+console.log(delArr.length);
+console.log(delArr);
+
+console.log("---------------------------------------------------------------------------------------------");
+
+// SORT : modify the original array.
+let Sortarr = [1,4,45,64,78,23,4];
+
+let Sortnewarr =arr.sort((a, b) => b - a);
+console.log(Sortnewarr);
+console.log(Sortarr);    
 
 console.log("---------------------------------------------------------------------------------------------");
 
@@ -37,10 +60,13 @@ let lan = ["Java", "JS", "Python"];
 
  // 2. POP : Removes the last element from an array and returns it. If the array is empty, undefined is returned and the array is not modified.
  // .pop() removes the last element from an array and modifies the original array.
-    lan.pop();   
+    let a = lan.pop();   
+    console.log("poped element from the array : " + " " + a);
+    
     console.log("POP" + " : " +  lan);
 
  // 3. SHIFT : Removes the first element from an array and returns it. If the array is empty, undefined is returned and the array is not modified.
+ //shift() does modify the original array.
 
     let fruit = ["apple", "banana", "mango", "grapes"];
     fruit.shift();    
@@ -60,13 +86,17 @@ let lan = ["Java", "JS", "Python"];
     
     console.log(juice.length);
 
-// 5. SPLICE : Removes elements from an array and, if necessary, inserts new elements in their place, returning the deleted elements.   
+// 5. SPLICE :  splice(start: number, deleteCount?: number)
+// modifies the original array. 
+// Removes elements from an array and, if necessary, inserts new elements in their place, returning the deleted elements.   
 // array.splice(start, deleteCount, item1, item2, …)
     let animal = ["dog", "cat", "lion", "deer", "tiger", "bull", "cow"];
     animal.splice(1,2, "beer", "crow");    
     console.log(animal);
 
-// 6. SLICE : Returns a copy of a section of an array. For both start and end,  
+// 6. SLICE : slice(start?: number, end?: number)
+// extracts a portion of the array and returns a new array, leaving the original unchanged. 
+// Returns a copy of a section of an array. For both start and end,  
 // .slice(0, -1) creates a new array without modifying the original one.        array.slice(start, end)
     let arr = [1,2,3,4,5,6,7,8,9,0]; 
     let newarr = arr.slice(0,-1);   

@@ -10,6 +10,8 @@ const fruitcount = fruits.reduce((acc,fruit) => {
 
 console.log(fruitcount);
 
+console.log("************************************************************************************");
+
 // operators in JS
 /*
 The logical OR assignment (||=) operator in JavaScript assigns a value to a variable only if the variable is falsy (false, 0, "", null, undefined, NaN).
@@ -33,7 +35,7 @@ const mod = words.reduce((acc,word) => {
 },{});
 console.log(mod);
 
-console.log("*******************************");
+console.log("************************************************************************************");
 
 // 3. Adding numbers in an array.
 
@@ -51,6 +53,32 @@ for(let i=0; i<arr.length; i++) {
 }
 console.log(arrSum);
 
+// OR
+
+let sum = 0;
+arr.reduce((acc,num) => {
+
+    if(typeof num !== "string") {
+        sum +=num
+    }
+    return acc;
+},0);
+console.log(sum);
+
+// OR
+
+let num = arr.filter((e) => typeof e !== "string");
+console.log(num);
+
+let sumofnum = num.reduce((acc,numb) => {
+
+    acc += numb;
+    return acc;
+},0)
+console.log(sumofnum);
+
+console.log("************************************************************************************");
+
 // EXtract data from a String:
 let dt = "2022-02-26"
 
@@ -63,16 +91,4 @@ let newFileName = filename.replace(".pdf" , ".csv")
 console.log(newFileName);
 
 console.log(filename.substring(0,11));
-
-
-const fruits = ["apple", "banana", "apple", "orange", "banana", "apple"];
-
-let count = fruits.reduce((acc , fruit) => {
-
-    acc[fruit] ??= 0;
-    acc[fruit] ++
-    return acc
-},{})
-console.log(count);
-
 

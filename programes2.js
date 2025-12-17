@@ -187,6 +187,12 @@ for (let i = 1; i < expenses.length; i++) {
 
 console.log("Lowest expense:", minValue);
 
+// OR
+
+let max2= expenses.reduce((acc,exp) => acc > exp ? acc : exp);     // ternary operator, and it works like a compact if–else.
+console.log(max2);
+
+
 console.log("--------------------------------------------------------------------------------");
 
 const studentNames = ["Alice", "Bob", "Charlie", "Diana", "Ethan"];
