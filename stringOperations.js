@@ -48,3 +48,13 @@ while (value!== -1) {
 }
 console.log(count);
 
+
+let str = "javaScript"
+
+console.log(str.substring(-2,2));   // in substring -ve number is convered to 0 this thi swill be like (0,2) >> ja
+console.log((str.slice(2,5)));   // vaS
+
+
+
+
+

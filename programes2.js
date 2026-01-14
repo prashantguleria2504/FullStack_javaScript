@@ -85,8 +85,11 @@ console.log(count);
 
 // OR
 
-let count2 = quote.split("day").length-1;
-console.log(count2);
+let splitVal = quote.match(/day/g)
+console.log(splitVal);
+
+count = (splitVal || []).length
+console.log(count);
 
 console.log("-----------------print all the values of a object -------------------------------");
 // print all the values in the object
@@ -167,7 +170,7 @@ console.log("Highest individual expense : " + high);
 
 // OR
 
-minvalue = Math.min(...expenses)
+minvalue = Math.min(...expenses)     // ... expands the array into individual arguments:
 console.log("Lowest individual expense : " + minvalue);
 
 highVal = Math.max(...expenses)

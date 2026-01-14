@@ -92,3 +92,31 @@ console.log(newFileName);
 
 console.log(filename.substring(0,11));
 
+console.log("************************************************************************************");
+
+// Remove duplicates from an Array
+
+let names = ["Naveen", "Tom", "Lisa", "Naveen", "Peter", "Raj", "Tom", "Robby", "Tom"]
+
+let uniqueNames = [...new Set(names)]
+console.log(uniqueNames);
+
+console.log("************************************************************************************");
+
+// Reverse an array
+
+let a = [1,2,3,4,5,6,6,6,7,3,2]
+console.log(a.reverse());
+
+console.log("************************************************************************************");
+
+// Reverse a number 
+
+let b = 2345678
+console.log(typeof(b));
+
+let rev = parseInt(b.toString().split("").reverse().join(""))
+console.log(rev);
+
+console.log(b.toString().split("").reverse().join(""));
+

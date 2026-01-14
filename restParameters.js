@@ -6,6 +6,7 @@
  * 4. has length property
  * 
  */
+// Rest parameters allow a function to accept any number of arguments by collecting them into an array using the ... syntax.
 
 function addNum (num1, num2, ...numN) {
 
@@ -35,3 +36,11 @@ addNum(2,2,3)
     return sum
 })(7,7)
 
+
+// using reduce:
+
+const addnums = (...num) => {
+   return num.reduce((acc,n) => acc+n , 0)
+}
+
+console.log(addnums(2,3,4));
