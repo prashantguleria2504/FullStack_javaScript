@@ -5,6 +5,9 @@ class LoginPage extends page{
 
     constructor(){
         super()
+        console.log(">> Calling Child class constructor.");
+        this.runDate = new Date()
+        console.log(`The run date is : ${this.runDate}`);
     }
 
     // getter property
@@ -18,6 +21,7 @@ class LoginPage extends page{
     clickLoginBtn(){
        // this.clickEle("loginBtn")   // if calling directly parent class method
         this.clickEle(this.loginBtnGet)   // calling getter.
+  
     }
 
 }
