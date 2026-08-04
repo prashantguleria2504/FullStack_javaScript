@@ -7,13 +7,18 @@ class LoginPage extends page{
         super()
     }
 
+    // getter property
+
+    get loginBtnGet(){
+        return "loginBtnEle"
+    }
 
     // child class method to click login btn.
 
     clickLoginBtn(){
-        this.clickEle("loginBtn")
+       // this.clickEle("loginBtn")   // if calling directly parent class method
+        this.clickEle(this.loginBtnGet)   // calling getter.
     }
-
 
 }
 
