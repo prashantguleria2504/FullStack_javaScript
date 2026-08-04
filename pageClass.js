@@ -20,3 +20,6 @@ class Page{
 }
 
 module.exports = Page
+
+
+// This parent class is inherited by Page_login.js.
