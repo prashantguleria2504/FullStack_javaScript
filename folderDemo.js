@@ -24,3 +24,18 @@ fs.mkdirSync(`${process.cwd()}/screenshots`, { recursive: true });  // recursive
 let filePath = `${process.cwd()}/Data/placeOrderTestData.json`;
 let fileData = fs.readFileSync(filePath , "utf-8")
 console.log(fileData);
+
+
+// Write to file
+
+let err = {
+    testid : "TC123",
+    error : "App failed to launch"
+};
+
+fs.writeFileSync(`${process.cwd()}/Data/err.json` , JSON.stringify(err,undefined,4))
+
+
+// Delete a file
+
+fs.unlinkSync(`${process.cwd()}/Data/err.json`)
