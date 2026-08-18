@@ -18,3 +18,9 @@ fs.mkdirSync(`${process.cwd()}/screenshots`, { recursive: true });  // recursive
  if(fs.existsSync(`${process.cwd()}/screenshots`)){
     fs.rmdirSync(`${process.cwd()}/screenshots`)
 }
+
+// read file.
+
+let filePath = `${process.cwd()}/Data/placeOrderTestData.json`;
+let fileData = fs.readFileSync(filePath , "utf-8")
+console.log(fileData);
