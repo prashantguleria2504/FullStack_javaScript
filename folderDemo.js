@@ -39,3 +39,10 @@ fs.writeFileSync(`${process.cwd()}/Data/err.json` , JSON.stringify(err,undefined
 // Delete a file
 
 fs.unlinkSync(`${process.cwd()}/Data/err.json`)
+
+
+// Console output to a file.
+
+// in terminal type the command , followed by > and then folder name.
+
+// eg:    node folderDemo.js > output.txt    -- this will create the file in the root dir.
